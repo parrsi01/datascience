@@ -1,4 +1,4 @@
-# Humanitarian Logistics Optimization (UN-Style)
+# Humanitarian Logistics Optimization (Enterprise-Grade)
 
 - Author: Simon Parris
 - Date: 2026-02-22
@@ -19,9 +19,9 @@ Constraints are hard limits the solution must obey, such as budget caps, shipmen
 
 A cost-efficient solution can still over-serve some regions and under-serve others. Fairness indicators help reveal uneven allocation patterns for human review.
 
-## Institutional implications (UN context)
+## Institutional implications (enterprise context)
 
-UN-style planning often balances urgency, cost, risk, and equity. A reproducible optimization baseline provides a defensible starting point for coordination and audit review.
+Enterprise-grade humanitarian planning often balances urgency, cost, risk, and equity. A reproducible optimization baseline provides a defensible starting point for coordination and audit review.
 
 ## How to rebuild without AI
 

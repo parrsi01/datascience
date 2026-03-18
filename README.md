@@ -9,7 +9,7 @@ Date: 2026-02-22
 
 ## 1. Overview
 
-This repository is a reproducible, institutional-grade data science and AI engineering lab designed for aviation, humanitarian, and scientific analytics contexts (UN / IATA / CERN-style expectations).
+This repository is a reproducible, institutional-grade data science and AI engineering lab designed for aviation, humanitarian, and scientific analytics contexts (professional, institutional-grade expectations).
 
 It combines data engineering, statistical rigor, ML pipelines, explainability, evaluation, operational monitoring, optimization, and decentralized anomaly detection research into one offline-readable portfolio package.
 
@@ -31,8 +31,8 @@ Detailed diagrams:
 - ML Core: Config-driven baseline + XGBoost training pipeline (`src/ml_core/`)
 - Advanced ML: SMOTE/weights logic, Optuna tuning, SHAP explainability (`src/ml_advanced/`)
 - Evaluation Suite: Stability, threshold calibration, bias/group metrics, drift snapshots (`src/evaluation/`)
-- Humanitarian Optimization: UN-style linear programming allocation and sensitivity analysis (`src/projects/humanitarian_optimization/`)
-- Air Traffic Analytics: IATA-style graph flow metrics, delay modeling, forecasting (`src/projects/air_traffic_delay/`)
+- Humanitarian Optimization: enterprise-grade linear programming allocation and sensitivity analysis (`src/projects/humanitarian_optimization/`)
+- Air Traffic Analytics: industry-grade graph flow metrics, delay modeling, forecasting (`src/projects/air_traffic_delay/`)
 - Rare Event Detection: Imbalanced classification pipelines and anomaly-oriented evaluation artifacts (`src/ml_core/`, `src/ml_advanced/`, `src/evaluation/`)
 - Operational Anomaly System: Quality + inference + drift + FastAPI dashboard (`src/projects/ops_anomaly_system/`)
 - Decentralized MARL + XGBoost Algorithm: Simon Parris research module for decentralized federated anomaly detection (`algorithm_marl_xgboost/`)

@@ -80,7 +80,7 @@ SCHEMAS: dict[str, dict[str, Any]] = {
         },
         "ranges": {"quantity": (0, None), "priority": (1, 5)},
     },
-    "cern_events": {
+    "sci_events": {
         "required": ["event_id", "detector", "energy_gev", "is_rare_event", "recorded_at"],
         "types": {
             "event_id": str,

@@ -17,9 +17,9 @@ Operators need to know whether the system is healthy and whether outputs are tru
 
 ## Institutional mapping
 
-- UN: logistics monitoring for shipments, routing disruptions, and priority anomalies
-- IATA: operations monitoring for flight delays, congestion, and schedule risk
-- CERN: detector monitoring for unusual event patterns and data quality shifts
+- International organization IT support: logistics monitoring for shipments, routing disruptions, and priority anomalies
+- Transport and logistics enterprise operations: operations monitoring for flight delays, congestion, and schedule risk
+- Scientific research infrastructure: detector monitoring for unusual event patterns and data quality shifts
 
 ## How to rebuild without AI
 

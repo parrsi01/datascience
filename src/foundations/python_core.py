@@ -200,7 +200,7 @@ class InstitutionalDataset:
 def run_python_foundations_demo() -> dict[str, object]:
     """Run all Python foundations demos and return structured results."""
 
-    dataset = InstitutionalDataset(name="aviation_ops", size=5000, source="IATA-demo")
+    dataset = InstitutionalDataset(name="aviation_ops", size=5000, source="industry-demo")
     schema_ok = dataset.validate_schema(
         actual_columns=["flight_id", "delay_minutes", "fuel_consumption", "passenger_count"],
         required_columns=["flight_id", "delay_minutes", "fuel_consumption", "passenger_count"],

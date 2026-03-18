@@ -24,7 +24,7 @@ A p-value tells you how surprising your result would be if there were no real ef
 
 ## 5. Why institutions require reproducibility
 
-UN, IATA, and CERN-style environments need repeatable methods because results may influence operations, safety, policy, or scientific claims. Reproducibility supports auditability, peer review, and trust.
+Professional and enterprise environments need repeatable methods because results may influence operations, safety, policy, or scientific claims. Reproducibility supports auditability, peer review, and trust.
 
 ## 6. How to rebuild this module without AI
 

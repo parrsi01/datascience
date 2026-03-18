@@ -1,2 +1,2 @@
-"""Air traffic flow and delay forecasting project (IATA-style)."""
+"""Air traffic flow and delay forecasting project (industry-grade)."""
 

@@ -101,7 +101,7 @@ def _domain_rule_reason(dataset_name: str, row: dict[str, Any]) -> str | None:
         allowed = {"pending", "in_transit", "delivered", "cancelled"}
         if row.get("status") not in allowed:
             return "status not in allowed set"
-    elif dataset_name == "cern_events":
+    elif dataset_name == "sci_events":
         energy = row.get("energy_gev")
         if isinstance(energy, (int, float)) and not (0 <= float(energy) <= 1e7):
             return "energy_gev outside realistic simulation range"

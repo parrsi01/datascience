@@ -15,11 +15,11 @@ Constraints enforce data quality at the database level (for example, no negative
 
 Indexes make frequent lookups and filters much faster by helping the database find rows without scanning the whole table. In institutional workflows, this improves response time for dashboards, operations, and investigations.
 
-## How this maps to UN/IATA/CERN needs
+## How this maps to professional and enterprise needs
 
-- UN/humanitarian workflows: shipment status and priority tracking across regions
-- IATA/aviation workflows: flight delays, routes, and fuel efficiency analysis
-- CERN/scientific workflows: event logs, rare event rates, and time-based analysis
+- International organization/humanitarian workflows: shipment status and priority tracking across regions
+- Transport and logistics enterprise workflows: flight delays, routes, and fuel efficiency analysis
+- Scientific research infrastructure workflows: event logs, rare event rates, and time-based analysis
 - Shared requirement: reproducible ingestion, validation, query logic, and documented controls
 
 ## How to rebuild and run the pipeline without AI
@@ -38,7 +38,7 @@ Indexes make frequent lookups and filters much faster by helping the database fi
 ### DE-101: Build Institutional PostgreSQL Schema and Validation Baseline
 
 - Type: Story
-- Goal: Establish audited schema + constraints for flights, humanitarian shipments, and CERN-style events.
+- Goal: Establish audited schema + constraints for flights, humanitarian shipments, and scientific detector-style events.
 - Acceptance Criteria:
   - `scripts/sql/001_create_schema.sql` creates all tables and indexes
   - Validation module enforces required columns, types, and ranges

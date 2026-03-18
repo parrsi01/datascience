@@ -93,7 +93,7 @@ def test_gate_fails_when_violations_exceed_threshold() -> None:
                 "status": "pending",
             }
         ],
-        "cern_events": [
+        "sci_events": [
             {
                 "event_id": "CE1",
                 "detector": "ATLAS",

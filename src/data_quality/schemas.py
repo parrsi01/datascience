@@ -36,7 +36,7 @@ try:  # pragma: no cover - environment dependent
         priority: int = Field(ge=1, le=5)
         status: str
 
-    class CERNEventRow(BaseModel):
+    class SciEventRow(BaseModel):
         event_id: str
         detector: str
         energy_gev: float = Field(ge=0)
@@ -166,7 +166,7 @@ except Exception:  # pragma: no cover - main path in this environment
         }
 
 
-    class CERNEventRow(_SchemaBase):
+    class SciEventRow(_SchemaBase):
         required_fields = {
             "event_id": (str, {}),
             "detector": (str, {}),

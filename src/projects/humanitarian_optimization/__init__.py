@@ -1,2 +1,2 @@
-"""Humanitarian logistics optimization project (UN-style)."""
+"""Humanitarian logistics optimization project (enterprise-grade)."""
 

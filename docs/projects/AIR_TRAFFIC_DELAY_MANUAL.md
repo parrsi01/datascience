@@ -1,4 +1,4 @@
-# Air Traffic Flow & Delay Forecasting (IATA-Style)
+# Air Traffic Flow & Delay Forecasting (Industry-Grade)
 
 - Author: Simon Parris
 - Date: 2026-02-22
@@ -15,9 +15,9 @@ When traffic is concentrated through a few airports, delays can spread across th
 
 Forecasting does not remove uncertainty; it helps teams plan for likely ranges of delay conditions. The goal is better resource allocation, not perfect prediction.
 
-## How this maps to IATA-type analytics work
+## How this maps to industry-standard analytics work
 
-IATA-style analytics often combines operational event data, network flow analysis, and predictive models to support delay mitigation, capacity planning, and airport/airline coordination.
+Industry-grade analytics in transport and logistics often combines operational event data, network flow analysis, and predictive models to support delay mitigation, capacity planning, and airport/airline coordination.
 
 ## How to rebuild without AI
 

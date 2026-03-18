@@ -80,8 +80,8 @@ def generate_humanitarian_shipments(
     return rows
 
 
-def generate_cern_events(count: int = 1000, seed: int = 300) -> list[dict[str, Any]]:
-    """Generate synthetic CERN-style detector event records."""
+def generate_sci_events(count: int = 1000, seed: int = 300) -> list[dict[str, Any]]:
+    """Generate synthetic scientific detector event records."""
 
     rng = random.Random(seed)
     detectors = ["ATLAS", "CMS", "ALICE", "LHCb"]
@@ -150,9 +150,9 @@ def _insert_many(table_name: str, rows: Sequence[dict[str, Any]], batch_size: in
             ON CONFLICT (shipment_id) DO NOTHING
             """
         ),
-        "cern_events": text(
+        "sci_events": text(
             """
-            INSERT INTO cern_events (
+            INSERT INTO sci_events (
               event_id, detector, energy_gev, is_rare_event, recorded_at
             ) VALUES (
               :event_id, :detector, :energy_gev, :is_rare_event, :recorded_at
@@ -181,7 +181,7 @@ def fetch_row_counts() -> dict[str, int]:
     queries = {
         "flights": "SELECT COUNT(*) AS count FROM flights",
         "humanitarian_shipments": "SELECT COUNT(*) AS count FROM humanitarian_shipments",
-        "cern_events": "SELECT COUNT(*) AS count FROM cern_events",
+        "sci_events": "SELECT COUNT(*) AS count FROM sci_events",
     }
     engine = get_engine()
     counts: dict[str, int] = {}
@@ -202,7 +202,7 @@ def ingest_all(batch_size: int = 200) -> dict[str, int]:
         generate_humanitarian_shipments(count=1000),
         batch_size=batch_size,
     )
-    _insert_many("cern_events", generate_cern_events(count=1000), batch_size=batch_size)
+    _insert_many("sci_events", generate_sci_events(count=1000), batch_size=batch_size)
     counts = fetch_row_counts()
     LOGGER.info("Completed ingestion pipeline counts=%s", counts)
     return counts

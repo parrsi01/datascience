@@ -16,14 +16,14 @@ except Exception:  # pragma: no cover - main path here
         return False
 
 from data_engineering.ingest import (
-    generate_cern_events,
+    generate_sci_events,
     generate_flights,
     generate_humanitarian_shipments,
 )
 from data_quality.logging_config import get_logger, log_event
 from data_quality.quality_metrics import compute_quality_metrics
 from data_quality.reporting import REPORT_DIR, write_dataset_artifacts, write_summary_quality_report
-from data_quality.schemas import CERNEventRow, FlightRow, HumanitarianShipmentRow
+from data_quality.schemas import SciEventRow, FlightRow, HumanitarianShipmentRow
 from data_quality.validators import enforce_domain_rules, validate_dataframe
 
 
@@ -31,12 +31,12 @@ LOGGER = get_logger("data_quality.runner")
 SCHEMA_MODELS = {
     "flights": FlightRow,
     "humanitarian_shipments": HumanitarianShipmentRow,
-    "cern_events": CERNEventRow,
+    "sci_events": SciEventRow,
 }
 PRIMARY_KEYS = {
     "flights": "flight_id",
     "humanitarian_shipments": "shipment_id",
-    "cern_events": "event_id",
+    "sci_events": "event_id",
 }
 SCHEMA_VIOLATION_THRESHOLD = 0.01
 DUPLICATE_RATE_THRESHOLD = 0.001
@@ -63,7 +63,7 @@ def load_synthetic_datasets() -> dict[str, list[dict[str, Any]]]:
     return {
         "flights": generate_flights(count=1000),
         "humanitarian_shipments": generate_humanitarian_shipments(count=1000),
-        "cern_events": generate_cern_events(count=1000),
+        "sci_events": generate_sci_events(count=1000),
     }
 
 

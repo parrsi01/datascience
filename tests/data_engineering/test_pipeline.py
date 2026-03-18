@@ -36,20 +36,20 @@ def test_tables_exist(db_ready: None) -> None:
                 SELECT table_name
                 FROM information_schema.tables
                 WHERE table_schema = 'public'
-                  AND table_name IN ('flights', 'humanitarian_shipments', 'cern_events')
+                  AND table_name IN ('flights', 'humanitarian_shipments', 'sci_events')
                 ORDER BY table_name
                 """
             )
         ).mappings()
         table_names = [row["table_name"] for row in rows]
-    assert table_names == ["cern_events", "flights", "humanitarian_shipments"]
+    assert table_names == ["sci_events", "flights", "humanitarian_shipments"]
 
 
 def test_ingestion_inserts_rows(db_ready: None) -> None:
     counts = fetch_row_counts()
     assert counts["flights"] > 0
     assert counts["humanitarian_shipments"] > 0
-    assert counts["cern_events"] > 0
+    assert counts["sci_events"] > 0
 
 
 def test_query_returns_expected_columns(db_ready: None) -> None:

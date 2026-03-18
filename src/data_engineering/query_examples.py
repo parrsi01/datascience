@@ -6,7 +6,7 @@ from typing import Any
 
 from data_engineering.db import get_engine
 from data_engineering.ingest import (
-    generate_cern_events,
+    generate_sci_events,
     generate_flights,
     generate_humanitarian_shipments,
 )
@@ -59,7 +59,7 @@ def run_query_examples(limit: int = 10) -> dict[str, list[dict[str, Any]]]:
                    DATE(recorded_at) AS event_day,
                    ROUND(AVG(CASE WHEN is_rare_event THEN 1.0 ELSE 0.0 END)::numeric, 4) AS rare_event_rate,
                    COUNT(*) AS total_events
-            FROM cern_events
+            FROM sci_events
             GROUP BY detector, DATE(recorded_at)
             ORDER BY event_day, detector
             LIMIT :limit
@@ -109,7 +109,7 @@ def run_query_examples_offline(limit: int = 10) -> dict[str, list[dict[str, Any]
 
     flights = generate_flights(count=1000)
     shipments = generate_humanitarian_shipments(count=1000)
-    events = generate_cern_events(count=1000)
+    events = generate_sci_events(count=1000)
 
     route_groups: dict[tuple[str, str], dict[str, float]] = {}
     top_delayed = sorted(

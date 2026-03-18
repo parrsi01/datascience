@@ -20,7 +20,7 @@ CREATE TABLE IF NOT EXISTS humanitarian_shipments (
   created_at TIMESTAMP NOT NULL DEFAULT NOW()
 );
 
-CREATE TABLE IF NOT EXISTS cern_events (
+CREATE TABLE IF NOT EXISTS sci_events (
   event_id TEXT PRIMARY KEY,
   detector TEXT NOT NULL,
   energy_gev NUMERIC NOT NULL CHECK (energy_gev >= 0),
@@ -36,5 +36,5 @@ CREATE INDEX IF NOT EXISTS idx_flights_arr_airport ON flights (arr_airport);
 CREATE INDEX IF NOT EXISTS idx_shipments_region ON humanitarian_shipments (region);
 CREATE INDEX IF NOT EXISTS idx_shipments_priority ON humanitarian_shipments (priority);
 
-CREATE INDEX IF NOT EXISTS idx_cern_events_recorded_at ON cern_events (recorded_at);
-CREATE INDEX IF NOT EXISTS idx_cern_events_is_rare_event ON cern_events (is_rare_event);
+CREATE INDEX IF NOT EXISTS idx_sci_events_recorded_at ON sci_events (recorded_at);
+CREATE INDEX IF NOT EXISTS idx_sci_events_is_rare_event ON sci_events (is_rare_event);
